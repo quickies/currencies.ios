@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17AC13E0705CCB5966896031 /* Pods_Currencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75F8F555C929358D1B169AE /* Pods_Currencies.framework */; };
+		CD333A0D1DFDC8A20062C822 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD333A0C1DFDC8A20062C822 /* Service.swift */; };
+		CD333A0F1DFDC8A90062C822 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD333A0E1DFDC8A90062C822 /* Config.swift */; };
 		CDAC100F1DFD66D800E7C0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC100E1DFD66D800E7C0A5 /* AppDelegate.swift */; };
 		CDAC10121DFD66D800E7C0A5 /* Currencies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDAC10101DFD66D800E7C0A5 /* Currencies.xcdatamodeld */; };
 		CDAC10141DFD66D800E7C0A5 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC10131DFD66D800E7C0A5 /* MasterViewController.swift */; };
@@ -21,6 +23,8 @@
 		04A1E52225F7FD62CC326F57 /* Pods-Currencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.release.xcconfig"; sourceTree = "<group>"; };
 		8EBFC2480C51ED6B5F89CE00 /* Pods-Currencies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.debug.xcconfig"; sourceTree = "<group>"; };
 		B75F8F555C929358D1B169AE /* Pods_Currencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD333A0C1DFDC8A20062C822 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CD333A0E1DFDC8A90062C822 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CDAC100B1DFD66D800E7C0A5 /* Currencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAC100E1DFD66D800E7C0A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDAC10111DFD66D800E7C0A5 /* Currencies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Currencies.xcdatamodel; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		CDAC100D1DFD66D800E7C0A5 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
+				CD333A0E1DFDC8A90062C822 /* Config.swift */,
+				CD333A0C1DFDC8A20062C822 /* Service.swift */,
 				CDAC100E1DFD66D800E7C0A5 /* AppDelegate.swift */,
 				CDAC10131DFD66D800E7C0A5 /* MasterViewController.swift */,
 				CDAC10151DFD66D800E7C0A5 /* DetailViewController.swift */,
@@ -219,8 +225,10 @@
 			files = (
 				CDAC10121DFD66D800E7C0A5 /* Currencies.xcdatamodeld in Sources */,
 				CDAC100F1DFD66D800E7C0A5 /* AppDelegate.swift in Sources */,
+				CD333A0D1DFDC8A20062C822 /* Service.swift in Sources */,
 				CDAC10141DFD66D800E7C0A5 /* MasterViewController.swift in Sources */,
 				CDAC10161DFD66D800E7C0A5 /* DetailViewController.swift in Sources */,
+				CD333A0F1DFDC8A90062C822 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

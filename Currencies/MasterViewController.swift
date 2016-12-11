@@ -13,30 +13,29 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
+    let service = Service(baseURL: Config.serviceURL)
+    
+    func setupRefreshControl(){
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.addTarget(
+            self,
+            action: #selector(MasterViewController.refresh(sender:)),
+            for: UIControlEvents.valueChanged
+        )
+    }
 
+    func refresh(sender:AnyObject){
 
-    func addDummyEntry(){
-        let context = self.fetchedResultsController.managedObjectContext
-        let currency = Currency(context: context)
-        currency.code = "CHF"
-        currency.title = "Swiss Francs"
-        currency.rate = 1.0
-        
-        do {
-            try context.save()
-        } catch let e as NSError {
-            if e.code == CocoaError.managedObjectConstraintMerge.rawValue {
-                context.delete(currency)
-                try! context.save()
-            }
+        _ = service.loadCurrencies(context: fetchedResultsController.managedObjectContext).then{ result -> Void in
+            self.refreshControl!.endRefreshing()
+            _ = try? self.managedObjectContext?.save()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addDummyEntry()
-        
+        setupRefreshControl()
         
         // Do any additional setup after loading the view, typically from a nib.
         if let split = self.splitViewController {
@@ -118,7 +117,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         label.textColor = UIColor.gray
         cell.accessoryView = label
         cell.isUserInteractionEnabled = false
-        cell.imageView?.image = UIImage(named: "Icon")
     }
 
     // MARK: - Fetched results controller
@@ -134,7 +132,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
