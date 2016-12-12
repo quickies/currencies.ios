@@ -117,6 +117,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         label.textColor = UIColor.gray
         cell.accessoryView = label
         cell.isUserInteractionEnabled = false
+        
+        if let c = currency.countryCode{
+            cell.imageView?.image = UIImage(named: c)
+        }
+        
+        cell.backgroundColor = (currency.code == Config.baseCurrency) ? Config.highlightColor : UIColor.clear
     }
 
     // MARK: - Fetched results controller
@@ -132,7 +138,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -195,6 +201,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
          self.tableView.reloadData()
      }
      */
-
+    
 }
 
+
+extension Currency{
+    
+    var countryCode: String?{
+        get{
+            
+            if let c = self.code{
+                return c.uppercased().substring(to: c.index(c.startIndex, offsetBy: 2))
+            }
+            
+            return nil
+        }
+    }
+}

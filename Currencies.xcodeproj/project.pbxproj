@@ -10,6 +10,7 @@
 		17AC13E0705CCB5966896031 /* Pods_Currencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75F8F555C929358D1B169AE /* Pods_Currencies.framework */; };
 		CD333A0D1DFDC8A20062C822 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD333A0C1DFDC8A20062C822 /* Service.swift */; };
 		CD333A0F1DFDC8A90062C822 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD333A0E1DFDC8A90062C822 /* Config.swift */; };
+		CD333A171DFE24830062C822 /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD333A161DFE24830062C822 /* FlagKit.xcassets */; };
 		CDAC100F1DFD66D800E7C0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC100E1DFD66D800E7C0A5 /* AppDelegate.swift */; };
 		CDAC10121DFD66D800E7C0A5 /* Currencies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDAC10101DFD66D800E7C0A5 /* Currencies.xcdatamodeld */; };
 		CDAC10141DFD66D800E7C0A5 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC10131DFD66D800E7C0A5 /* MasterViewController.swift */; };
@@ -25,6 +26,7 @@
 		B75F8F555C929358D1B169AE /* Pods_Currencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD333A0C1DFDC8A20062C822 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CD333A0E1DFDC8A90062C822 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CD333A161DFE24830062C822 /* FlagKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = FlagKit.xcassets; path = ../Pods/FlagKit/FlagKit.xcassets; sourceTree = "<group>"; };
 		CDAC100B1DFD66D800E7C0A5 /* Currencies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Currencies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAC100E1DFD66D800E7C0A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDAC10111DFD66D800E7C0A5 /* Currencies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Currencies.xcdatamodel; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				CDAC10151DFD66D800E7C0A5 /* DetailViewController.swift */,
 				CDAC10171DFD66D800E7C0A5 /* Main.storyboard */,
 				CDAC101A1DFD66D800E7C0A5 /* Assets.xcassets */,
+				CD333A161DFE24830062C822 /* FlagKit.xcassets */,
 				CDAC101C1DFD66D800E7C0A5 /* LaunchScreen.storyboard */,
 				CDAC101F1DFD66D800E7C0A5 /* Info.plist */,
 				CDAC10101DFD66D800E7C0A5 /* Currencies.xcdatamodeld */,
@@ -164,6 +167,7 @@
 			files = (
 				CDAC101E1DFD66D800E7C0A5 /* LaunchScreen.storyboard in Resources */,
 				CDAC101B1DFD66D800E7C0A5 /* Assets.xcassets in Resources */,
+				CD333A171DFE24830062C822 /* FlagKit.xcassets in Resources */,
 				CDAC10191DFD66D800E7C0A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
