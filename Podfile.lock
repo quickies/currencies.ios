@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.0.1)
+  - FlagKit (1.1.1)
   - PromiseKit (4.0.4):
     - PromiseKit/Foundation (= 4.0.4)
     - PromiseKit/QuartzCore (= 4.0.4)
@@ -14,12 +15,24 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - FlagKit (from `https://github.com/madebybowtie/FlagKit`, branch `swift3`)
   - PromiseKit
+
+EXTERNAL SOURCES:
+  FlagKit:
+    :branch: swift3
+    :git: https://github.com/madebybowtie/FlagKit
+
+CHECKOUT OPTIONS:
+  FlagKit:
+    :commit: 49cb27ec3b5404dd0e69808d1c24c0b5fe9b7cc1
+    :git: https://github.com/madebybowtie/FlagKit
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  FlagKit: a51b3c62dd29816fb11732bf45cdcf258d70b9f0
   PromiseKit: 8e8ee39d33ff199d92a1a883b5396f6285be6c91
 
-PODFILE CHECKSUM: 35e8f23df75a99cd20b28d800dbc4c68585bb393
+PODFILE CHECKSUM: f412542c160f08d29d8a68936e9b018aba25ac06
 
 COCOAPODS: 1.1.1
