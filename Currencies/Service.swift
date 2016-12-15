@@ -20,13 +20,13 @@ class Service: NSObject {
         self.baseURL = baseURL
     }
     
-    func loadNames() -> Promise<[String: [String: Any]]>{
+    func loadNames() -> Promise<[String: String]>{
         return Promise { fullfill, reject in
             manager.request(Config.currencyNamesURL).responseJSON(){ (response) in
                 switch response.result{
                 case .success(let value):
                     
-                    if let dict = value as? [String: [String: Any]]{
+                    if let dict = value as? [String: String]{
                         fullfill(dict)
                     } else {
                         reject(NSError(domain: "Could not parse", code: 999, userInfo: nil))
@@ -65,14 +65,14 @@ class Service: NSObject {
 
 extension Currency{
     
-    static func mapFromJSON(json: [String: NSNumber], names: [String: [String: Any]], context: NSManagedObjectContext) -> [Currency]{
+    static func mapFromJSON(json: [String: NSNumber], names: [String: String], context: NSManagedObjectContext) -> [Currency]{
         
         var result = [Currency]()
         for (key, value) in json {
             let c = Currency(context: context)
             c.code = key
             c.rate = value.floatValue
-            c.title = names[c.code!]?["name"] as? String
+            c.title = names[c.code!]
             result.append(c)
         }
         return result

@@ -38,7 +38,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let context = self.fetchedResultsController.managedObjectContext
         let currency = Currency(context: context)
         currency.code = "CHF"
-        currency.title = "Swiss Francs"
+        currency.title = "Swiss Franc"
         currency.rate = 1.0
         
         do {
