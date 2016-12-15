@@ -33,7 +33,30 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
     
+    
+    func addBaseEntry(){
+        let context = self.fetchedResultsController.managedObjectContext
+        let currency = Currency(context: context)
+        currency.code = "CHF"
+        currency.title = "Swiss Francs"
+        currency.rate = 1.0
+        
+        do {
+            try context.save()
+        } catch let e as NSError {
+            if e.code == CocoaError.managedObjectConstraintMerge.rawValue {
+                context.delete(currency)
+                try! context.save()
+            }
+        }
+    }
+    
+
+    
     override func viewDidLoad() {
+        
+        addBaseEntry()
+
         super.viewDidLoad()
         setupRefreshControl()
         
